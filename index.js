@@ -1325,8 +1325,8 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_1.png?1773058516577", id:"index_atlas_1"},
-		{src:"sounds/weddingmusicwav.mp3?1773058516875", id:"weddingmusicwav"}
+		{src:"images/index_atlas_1.png?1773063342584", id:"index_atlas_1"},
+		{src:"sounds/weddingmusicwav.mp3?1773063342893", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
