@@ -4,7 +4,7 @@ var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"index_atlas_P_1", frames: [[0,0,591,1280],[593,0,591,1280],[1186,0,591,1280]]},
-		{name:"index_atlas_P_2", frames: [[510,1282,535,466],[0,0,591,1280],[593,0,397,396],[593,398,397,396],[593,796,397,396],[0,1282,508,491]]},
+		{name:"index_atlas_P_2", frames: [[510,1282,535,466],[0,0,591,1280],[992,0,390,399],[593,0,397,396],[593,398,397,396],[593,796,397,396],[0,1282,508,491]]},
 		{name:"index_atlas_NP_1", frames: [[0,0,1920,1080]]},
 		{name:"index_atlas_NP_2", frames: [[0,0,1080,1920]]},
 		{name:"index_atlas_NP_3", frames: [[0,0,1080,1920]]},
@@ -74,30 +74,37 @@ lib.ssMetadata = [
 
 
 
-(lib.Screenshot_832026_143822_wwwbingcomremovebgpreview = function() {
+(lib.musicsymbol = function() {
 	this.initialize(ss["index_atlas_P_2"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Screenshot_832026_143822_wwwbingcomremovebgpreviewpngcopy = function() {
+(lib.Screenshot_832026_143822_wwwbingcomremovebgpreview = function() {
 	this.initialize(ss["index_atlas_P_2"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Screenshot_832026_143822_wwwbingcomremovebgpreviewpngcopy2 = function() {
+(lib.Screenshot_832026_143822_wwwbingcomremovebgpreviewpngcopy = function() {
 	this.initialize(ss["index_atlas_P_2"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.sealremovebgpreview = function() {
+(lib.Screenshot_832026_143822_wwwbingcomremovebgpreviewpngcopy2 = function() {
 	this.initialize(ss["index_atlas_P_2"]);
 	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.sealremovebgpreview = function() {
+	this.initialize(ss["index_atlas_P_2"]);
+	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -814,7 +821,7 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(130.85,0,0.3305,0.3305,90);
 
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#3D1A39").s().p("EhV4AsPMAAAhYdMCrxAAAMAAABYdg");
+	this.shape.graphics.f("#3D1A39").s().p("EgVcAsPMAAAhYdMAq5AAAMAAABYdg");
 	this.shape.setTransform(63.85,55.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.instance}]},1).to({state:[{t:this.shape},{t:this.instance}]},1).wait(1));
@@ -822,7 +829,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-485.8,-227.6,1099.4,566.2);
+p.nominalBounds = new cjs.Rectangle(-73.4,-227.6,274.6,566.2);
 
 
 (lib.click = function(mode,startPosition,loop,reversed) {
@@ -850,6 +857,33 @@ if (reversed == null) { reversed = false; }
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-12.3,-9.8,97.6,97.5);
+
+
+(lib.btn_musique = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.musicsymbol();
+	this.instance.setTransform(0,0,0.2429,0.2429);
+
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#3D1A39").s().p("Ay8TnMAAAgnNMAl5AAAMAAAAnNg");
+	this.shape.setTransform(50.55,43.325);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.instance}]},1).to({state:[{t:this.shape},{t:this.instance}]},1).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-70.7,-82.2,242.60000000000002,251.10000000000002);
 
 
 (lib.Symbol1 = function(mode,startPosition,loop,reversed) {
@@ -911,7 +945,7 @@ if (reversed == null) { reversed = false; }
 		*/
 		_this.play();
 		});
-		playSound("weddingmusicwav");
+		playSound("weddingmusicwav",1);
 	}
 	this.frame_139 = function() {
 		var _this = this;
@@ -935,14 +969,37 @@ if (reversed == null) { reversed = false; }
 		});
 	}
 	this.frame_384 = function() {
-		this.map1.on('click', function(){
-		    window.open('https://maps.app.goo.gl/HRsWW24z7HjhK8oEA?g_st=it', '_blank');
-		    this.stop();
-		}.bind(this));
+		var self = this;
+		self.stop();
 		
-		this.click2.on('click', function(){
-		    this.play();
-		}.bind(this));
+		// 1. Initialisation : On cache le bouton musique au départ
+		self.btn_musique.visible = false;
+		
+		// 2. Gestion du retour de Google Maps (Spécifique iPhone)
+		window.onfocus = function() {
+		    // Le bouton musique n'apparaît que si l'utilisateur revient sur la page
+		    self.btn_musique.visible = true;
+		};
+		
+		// 3. Action du bouton Map1
+		self.map1.on('click', function(){
+		    window.open('https://maps.app.goo.gl/HRsWW24z7HjhK8oEA?g_st=it', '_blank');
+		    self.stop(); 
+		});
+		
+		// 4. Action du bouton Musique (Réactivation par Timeline)
+		self.btn_musique.on('click', function() {
+		    // On revient d'une image en arrière et on rejoue pour forcer le son à se relancer
+		    self.gotoAndPlay(self.currentFrame - 1);
+		    
+		    // On recache le bouton après le clic
+		    self.btn_musique.visible = false; 
+		});
+		
+		// 5. Action du bouton Continuer (click2)
+		self.click2.on('click', function(){
+		    self.play();
+		});
 	}
 	this.frame_525 = function() {
 		// Action pour le bouton MAP 2 : Ouvre le lien ET arrête l'animation
@@ -1049,6 +1106,15 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_3}]},525).to({state:[{t:this.instance_2}]},131).to({state:[{t:this.instance_3}]},9).to({state:[]},11).wait(494));
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(656).to({_off:false},0).to({_off:true,y:-761.4},9).wait(505));
 
+	// music_symbol
+	this.btn_musique = new lib.btn_musique();
+	this.btn_musique.name = "btn_musique";
+	this.btn_musique.setTransform(84.4,1826.9,1,1,0,0,0,47.4,48.5);
+	this.btn_musique._off = true;
+	new cjs.ButtonHelper(this.btn_musique, 0, 1, 2, false, new lib.btn_musique(), 3);
+
+	this.timeline.addTween(cjs.Tween.get(this.btn_musique).wait(384).to({_off:false},0).to({_off:true},131).wait(655));
+
 	// click2
 	this.click2 = new lib.click2();
 	this.click2.name = "click2";
@@ -1141,7 +1207,7 @@ if (reversed == null) { reversed = false; }
 	// click
 	this.click = new lib.click();
 	this.click.name = "click";
-	this.click.setTransform(596.8,1799.9,1,1,0,0,0,36.8,36.9);
+	this.click.setTransform(503.7,1799.9,1,1,0,0,0,36.8,36.9);
 	this.click._off = true;
 	new cjs.ButtonHelper(this.click, 0, 1, 2, false, new lib.click(), 3);
 
@@ -1159,7 +1225,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_16 = new lib.Symbol9("synched",0);
 	this.instance_16.setTransform(1832,928,1,1,0,0,0,1832,992);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_16).to({x:1508.6},34).to({x:923.4},14).to({x:546.1},30).to({x:7.1},15).to({x:-431.8},31).to({x:-749.95},15).to({x:-749.65,y:-34.5},33).to({y:-997},8).to({_off:true},10).wait(980));
+	this.timeline.addTween(cjs.Tween.get(this.instance_16).to({x:1508.6},34).to({x:923.4},14).to({x:546.1},30).to({x:7.1},15).to({x:-431.8},31).to({regY:991.9,scaleX:1.2265,scaleY:1.2265,x:-1142.3,y:834.8},15).to({regX:1831.9,regY:992,scaleX:1.2414,scaleY:1.2414,x:-1160.25,y:-34.4},33).to({regX:1832,regY:991.9,scaleX:1.2235,scaleY:1.2235,x:-1134.6,y:-1228.05},8).to({_off:true},10).wait(980));
 
 	// evangile
 	this.shape_5 = new cjs.Shape();
@@ -1202,7 +1268,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-2108.1,-1029,5849.1,4965.2);
+p.nominalBounds = new cjs.Rectangle(-2894.3,-1481.6,6635.3,5417.799999999999);
 // library properties:
 lib.properties = {
 	id: '18A8C089EEF8E9489AA23F1CC6E97076',
@@ -1212,13 +1278,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773080589669", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773080589669", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773080589669", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773080589669", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773080589669", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773080589669", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773080589738", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773089221236", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773089221236", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773089221236", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773089221237", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773089221237", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773089221237", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773089221317", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
