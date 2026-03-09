@@ -3,7 +3,12 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"index_atlas_1", frames: [[0,0,1920,1080],[1082,2364,535,466],[1082,1082,591,1280],[1675,1922,591,1280],[2268,1922,591,1280],[2861,1922,591,1280],[3454,2415,397,396],[3454,2813,397,396],[1082,2832,397,396],[3454,1922,508,491],[1922,0,1080,1920],[3004,0,1080,1920],[0,1082,1080,1920]]}
+		{name:"index_atlas_P_1", frames: [[0,0,591,1280],[593,0,591,1280],[1186,0,591,1280]]},
+		{name:"index_atlas_P_2", frames: [[510,1282,535,466],[0,0,591,1280],[593,0,397,396],[593,398,397,396],[593,796,397,396],[0,1282,508,491]]},
+		{name:"index_atlas_NP_1", frames: [[0,0,1920,1080]]},
+		{name:"index_atlas_NP_2", frames: [[0,0,1080,1920]]},
+		{name:"index_atlas_NP_3", frames: [[0,0,1080,1920]]},
+		{name:"index_atlas_NP_4", frames: [[0,0,1080,1920]]}
 ];
 
 
@@ -142,92 +147,92 @@ lib.ssMetadata = [
 
 
 (lib._002 = function() {
-	this.initialize(ss["index_atlas_1"]);
+	this.initialize(ss["index_atlas_NP_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._5861871683591933093removebgpreview = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(1);
+	this.initialize(ss["index_atlas_P_2"]);
+	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._5864123483405619229 = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(2);
+	this.initialize(ss["index_atlas_P_1"]);
+	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._5864123483405619230 = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(3);
+	this.initialize(ss["index_atlas_P_1"]);
+	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._5864123483405619231 = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(4);
+	this.initialize(ss["index_atlas_P_1"]);
+	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._5906856440905796399 = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(5);
+	this.initialize(ss["index_atlas_P_2"]);
+	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Screenshot_832026_143822_wwwbingcomremovebgpreview = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(6);
+	this.initialize(ss["index_atlas_P_2"]);
+	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Screenshot_832026_143822_wwwbingcomremovebgpreviewpngcopy = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(7);
+	this.initialize(ss["index_atlas_P_2"]);
+	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Screenshot_832026_143822_wwwbingcomremovebgpreviewpngcopy2 = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(8);
+	this.initialize(ss["index_atlas_P_2"]);
+	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.sealremovebgpreview = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(9);
+	this.initialize(ss["index_atlas_P_2"]);
+	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Untitled1 = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(10);
+	this.initialize(ss["index_atlas_NP_2"]);
+	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Untitled1jpgcopy2 = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(11);
+	this.initialize(ss["index_atlas_NP_3"]);
+	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Untitled2 = function() {
-	this.initialize(ss["index_atlas_1"]);
-	this.gotoAndStop(12);
+	this.initialize(ss["index_atlas_NP_4"]);
+	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -1325,8 +1330,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_1.png?1773063342584", id:"index_atlas_1"},
-		{src:"sounds/weddingmusicwav.mp3?1773063342893", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773077580737", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773077580737", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773077580737", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773077580737", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773077580737", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773077580737", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773077580821", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
