@@ -972,31 +972,33 @@ if (reversed == null) { reversed = false; }
 		var self = this;
 		self.stop();
 		
-		// 1. Initialisation : On cache le bouton musique au départ
+		// 1. Initialisation
 		self.btn_musique.visible = false;
 		
-		// 2. Gestion du retour de Google Maps (Spécifique iPhone)
+		// 2. Retour de Maps
 		window.onfocus = function() {
-		    // Le bouton musique n'apparaît que si l'utilisateur revient sur la page
 		    self.btn_musique.visible = true;
 		};
 		
-		// 3. Action du bouton Map1
+		// 3. Bouton Map
 		self.map1.on('click', function(){
 		    window.open('https://maps.app.goo.gl/HRsWW24z7HjhK8oEA?g_st=it', '_blank');
 		    self.stop(); 
 		});
 		
-		// 4. Action du bouton Musique (Réactivation par Timeline)
+		// 4. Bouton Musique (La méthode "Reset")
 		self.btn_musique.on('click', function() {
-		    // On revient d'une image en arrière et on rejoue pour forcer le son à se relancer
+		    // ÉTAPE CRUCIALE : On coupe TOUS les sons en mémoire
+		    createjs.Sound.stop(); 
+		    
+		    // On force l'animation à repartir d'une frame avant
 		    self.gotoAndPlay(self.currentFrame - 1);
 		    
-		    // On recache le bouton après le clic
+		    // On cache le bouton
 		    self.btn_musique.visible = false; 
 		});
 		
-		// 5. Action du bouton Continuer (click2)
+		// 5. Continuer
 		self.click2.on('click', function(){
 		    self.play();
 		});
@@ -1278,13 +1280,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773089221236", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773089221236", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773089221236", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773089221237", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773089221237", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773089221237", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773089221317", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773090562585", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773090562585", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773090562585", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773090562586", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773090562586", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773090562586", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773090562707", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
