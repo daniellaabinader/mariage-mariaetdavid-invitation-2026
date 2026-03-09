@@ -972,33 +972,34 @@ if (reversed == null) { reversed = false; }
 		var self = this;
 		self.stop();
 		
-		// 1. Initialisation
+		// 1. On cache le bouton au début
 		self.btn_musique.visible = false;
 		
-		// 2. Retour de Maps
+		// 2. ICI : On lie le fichier RÉEL au "SURNOM" (ID)
+		// "sounds/weddingmusic.wav" --> C'est le vrai nom du fichier dans ton dossier
+		// "weddingAudio" --> C'est le surnom qu'on utilise dans le code
+		createjs.Sound.registerSound("sounds/weddingmusic.wav", "weddingAudio");
+		
+		// 3. Quand l'invité revient de Google Maps
 		window.onfocus = function() {
 		    self.btn_musique.visible = true;
 		};
 		
-		// 3. Bouton Map
+		// 4. Bouton Map1
 		self.map1.on('click', function(){
 		    window.open('https://maps.app.goo.gl/HRsWW24z7HjhK8oEA?g_st=it', '_blank');
 		    self.stop(); 
 		});
 		
-		// 4. Bouton Musique (La méthode "Reset")
+		// 5. Bouton Musique (Le clic qui sauve tout sur iPhone)
 		self.btn_musique.on('click', function() {
-		    // ÉTAPE CRUCIALE : On coupe TOUS les sons en mémoire
 		    createjs.Sound.stop(); 
-		    
-		    // On force l'animation à repartir d'une frame avant
-		    self.gotoAndPlay(self.currentFrame - 1);
-		    
-		    // On cache le bouton
+		    // On appelle le SURNOM ici pour jouer le morceau
+		    createjs.Sound.play("weddingAudio"); 
 		    self.btn_musique.visible = false; 
 		});
 		
-		// 5. Continuer
+		// 6. Bouton Continuer (click2)
 		self.click2.on('click', function(){
 		    self.play();
 		});
@@ -1280,13 +1281,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773090562585", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773090562585", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773090562585", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773090562586", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773090562586", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773090562586", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773090562707", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773092047448", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773092047449", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773092047449", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773092047449", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773092047449", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773092047449", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773092047583", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
