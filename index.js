@@ -1222,13 +1222,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773093491666", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773093491666", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773093491666", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773093491666", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773093491666", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773093491666", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773093491777", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773138840265", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773138840265", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773138840265", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773138840265", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773138840265", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773138840266", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773138840365", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
