@@ -935,31 +935,29 @@ if (reversed == null) { reversed = false; }
 		});
 	}
 	this.frame_384 = function() {
-		// Action pour le bouton MAP 1 : Ouvre le lien Web ET arrête l'animation
+		// Action pour le bouton MAP 1
 		this.map1.on('click', function(){
-		    // On utilise ton lien exact
-		    var destinationUrl = "https://maps.app.goo.gl/HRsWW24z7HjhK8oEA?g_st=it";
+		    // Lien Bing Maps vers la Rue d'Ulm à Paris
+		    // Ce lien force l'affichage WEB sur iPhone et Android
+		    var universalUrl = "https://www.bing.com/maps?q=15-17+Rue+d'Ulm+75005+Paris+France";
 		    
-		    // On ouvre dans un nouvel onglet Safari pour ne pas quitter le navigateur
-		    window.open(destinationUrl, '_blank');
-		    
-		    // On arrête l'animation pour attendre l'invité
+		    window.open(universalUrl, '_blank');
 		    this.stop();
 		}.bind(this));
 		
-		// Action pour le bouton CLICK 2 : Relance le son et l'animation
+		// Action pour le bouton CLICK 2
 		this.click2.on('click', function(){
-		    // 1. Réveil du système audio (Indispensable sur iPhone)
+		    // Réveil du système audio (toujours le garder par sécurité)
 		    if (createjs.WebAudioPlugin && createjs.WebAudioPlugin.context) {
 		        createjs.WebAudioPlugin.context.resume();
 		    }
 		    
-		    // 2. On relance les instances de son mises en pause
+		    // On relance la musique
 		    createjs.Sound.activeInstances.forEach(function(inst) { 
 		        inst.paused = false; 
 		    });
 		
-		    // 3. On force le passage à la page suivante
+		    // On passe à la suite
 		    this.gotoAndPlay(this.currentFrame + 1);
 		
 		}.bind(this));
@@ -1232,13 +1230,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773148553399", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773148553399", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773148553399", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773148553399", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773148553399", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773148553400", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773148553516", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773150472510", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773150472510", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773150472511", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773150472511", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773150472511", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773150472511", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773150472613", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
