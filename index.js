@@ -935,31 +935,15 @@ if (reversed == null) { reversed = false; }
 		});
 	}
 	this.frame_384 = function() {
-		// Action pour le bouton MAP 1
+		// Action pour le bouton MAP 1 : Ouvre le lien ET arrête l'animation
 		this.map1.on('click', function(){
-		    // Lien Bing Maps vers la Rue d'Ulm à Paris
-		    // Ce lien force l'affichage WEB sur iPhone et Android
-		    var universalUrl = "https://www.bing.com/maps?q=15-17+Rue+d'Ulm+75005+Paris+France";
-		    
-		    window.open(universalUrl, '_blank');
+		    window.open('https://www.bing.com/maps?q=15-17+Rue+d'Ulm+75005+Paris+France', '_blank');
 		    this.stop();
 		}.bind(this));
 		
-		// Action pour le bouton CLICK 2
+		// Action pour le bouton CLICK 2 : Relance l'animation
 		this.click2.on('click', function(){
-		    // Réveil du système audio (toujours le garder par sécurité)
-		    if (createjs.WebAudioPlugin && createjs.WebAudioPlugin.context) {
-		        createjs.WebAudioPlugin.context.resume();
-		    }
-		    
-		    // On relance la musique
-		    createjs.Sound.activeInstances.forEach(function(inst) { 
-		        inst.paused = false; 
-		    });
-		
-		    // On passe à la suite
-		    this.gotoAndPlay(this.currentFrame + 1);
-		
+		    this.play();
 		}.bind(this));
 	}
 	this.frame_525 = function() {
@@ -1230,13 +1214,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773150472510", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773150472510", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773150472511", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773150472511", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773150472511", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773150472511", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773150472613", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773150973225", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773150973225", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773150973225", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773150973225", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773150973225", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773150973225", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773150973314", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
