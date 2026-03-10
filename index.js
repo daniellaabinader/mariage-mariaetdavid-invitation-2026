@@ -949,7 +949,7 @@ if (reversed == null) { reversed = false; }
 	this.frame_525 = function() {
 		// Action pour le bouton MAP 2 : Ouvre le lien ET arrête l'animation
 		this.map2.on('click', function(){
-		    window.open('https://maps.app.goo.gl/yyofE6HsRLeMkEAU7?g_st=it', '_blank');
+		    window.open('https://www.bing.com/maps?q=Salons%20Hoche%209%20Avenue%20Hoche%2075008%20Paris%20France', '_blank');
 		    this.stop();
 		}.bind(this));
 		
@@ -1214,13 +1214,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773152178553", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773152178554", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773152178554", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773152178554", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773152178554", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773152178554", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773152178645", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773152820065", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773152820065", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773152820065", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773152820065", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773152820065", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773152820065", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773152820167", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
