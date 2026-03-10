@@ -911,7 +911,7 @@ if (reversed == null) { reversed = false; }
 		*/
 		_this.play();
 		});
-		playSound("weddingmusicwav",1);
+		playSound("weddingmusicwav");
 	}
 	this.frame_139 = function() {
 		var _this = this;
@@ -937,7 +937,7 @@ if (reversed == null) { reversed = false; }
 	this.frame_384 = function() {
 		// Action pour le bouton MAP 1 : Ouvre le lien ET arrête l'animation
 		this.map1.on('click', function(){
-		    window.open('https://www.bing.com/maps?q=15-17+Rue+d%27Ulm+75005+Paris+France', '_blank');
+		    window.open('https://www.bing.com/maps?q=Cathedrale%20Notre-Dame%20du%20Liban%2015-17%20rue%20d%27Ulm%2075005%20Paris%20France', '_blank');
 		    this.stop();
 		}.bind(this));
 		
@@ -1214,13 +1214,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773152820065", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773152820065", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773152820065", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773152820065", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773152820065", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773152820065", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773152820167", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773156356884", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773156356884", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773156356884", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773156356884", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773156356884", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773156356884", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773156356952", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
