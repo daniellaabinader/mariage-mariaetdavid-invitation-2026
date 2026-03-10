@@ -942,21 +942,22 @@ if (reversed == null) { reversed = false; }
 		    this.stop();
 		}.bind(this));
 		
-		// Action pour le bouton CLICK 2
 		this.click2.on('click', function(){
-		    // 1. Réveil du son (Spécifique iPhone)
+		    // 1. On réveille le son immédiatement
 		    if (createjs.WebAudioPlugin && createjs.WebAudioPlugin.context) {
 		        createjs.WebAudioPlugin.context.resume();
 		    }
 		    
-		    // 2. Relancer la musique mise en pause
 		    createjs.Sound.activeInstances.forEach(function(inst) { 
 		        inst.paused = false; 
 		    });
 		
-		    // 3. Forcer l'animation à passer à la suite
-		    // On utilise gotoAndPlay pour être sûr de quitter la frame du "stop"
-		    this.gotoAndPlay(this.currentFrame + 1);
+		    // 2. On attend 100 millisecondes avant de changer de page
+		    // Cela laisse à l'iPhone le temps de gérer l'audio avant de bouger
+		    var self = this;
+		    setTimeout(function() {
+		        self.gotoAndPlay(self.currentFrame + 1);
+		    }, 100);
 		
 		}.bind(this));
 	}
@@ -1228,13 +1229,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773140249756", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773140249756", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773140249756", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773140249756", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773140249756", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773140249756", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773140249835", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773147280928", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773147280928", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773147280928", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773147280928", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773147280928", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773147280928", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773147281015", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
