@@ -904,7 +904,7 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0,241,525,666,1152,1310];
+	this.actionFrames = [0,241,525,657,1177,1335];
 	// timeline functions:
 	this.frame_0 = function() {
 		var _this = this;
@@ -961,7 +961,7 @@ if (reversed == null) { reversed = false; }
 		    this.play();
 		}.bind(this));
 	}
-	this.frame_666 = function() {
+	this.frame_657 = function() {
 		// Action pour le bouton MAP 2 : Ouvre le lien ET arrête l'animation
 		this.map2.on('click', function(){
 		    window.open('https://www.bing.com/maps?q=Salons%20Hoche%209%20Avenue%20Hoche%2075008%20Paris%20France', '_blank');
@@ -973,7 +973,7 @@ if (reversed == null) { reversed = false; }
 		    this.play();
 		}.bind(this));
 	}
-	this.frame_1152 = function() {
+	this.frame_1177 = function() {
 		var _this = this;
 		/*
 		Clicking on the specified symbol instance executes a function.
@@ -985,12 +985,12 @@ if (reversed == null) { reversed = false; }
 		window.open('https://forms.gle/6yoNU4HCcBG8HJNA9', '_blank');
 		});
 	}
-	this.frame_1310 = function() {
+	this.frame_1335 = function() {
 		this.stop();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(241).call(this.frame_241).wait(284).call(this.frame_525).wait(141).call(this.frame_666).wait(486).call(this.frame_1152).wait(158).call(this.frame_1310).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(241).call(this.frame_241).wait(284).call(this.frame_525).wait(132).call(this.frame_657).wait(520).call(this.frame_1177).wait(158).call(this.frame_1335).wait(1));
 
 	// forms
 	this.RSVP = new lib.RSVP();
@@ -999,7 +999,7 @@ if (reversed == null) { reversed = false; }
 	this.RSVP._off = true;
 	new cjs.ButtonHelper(this.RSVP, 0, 1, 2, false, new lib.RSVP(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.RSVP).wait(1011).to({_off:false},0).to({_off:true},159).wait(141));
+	this.timeline.addTween(cjs.Tween.get(this.RSVP).wait(1177).to({_off:false},0).wait(159));
 
 	// veuillez
 	this.shape = new cjs.Shape();
@@ -1007,7 +1007,7 @@ if (reversed == null) { reversed = false; }
 	this.shape.setTransform(535.6,908.75);
 	this.shape._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1011).to({_off:false},0).to({_off:true},159).wait(141));
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1177).to({_off:false},0).wait(159));
 
 	// liste_de_mariage
 	this.shape_1 = new cjs.Shape();
@@ -1018,8 +1018,8 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(214.45,916.25,1,1,0,0,0,437.1,441.8);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_1}]},819).to({state:[{t:this.instance}]},185).to({state:[{t:this.instance}]},7).to({state:[]},9).wait(291));
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1004).to({_off:false},0).to({x:-478.55},7).to({_off:true},9).wait(291));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_1}]},951).to({state:[{t:this.instance}]},219).to({state:[{t:this.instance}]},7).to({state:[]},9).wait(150));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1170).to({_off:false},0).to({x:-478.55},7).to({_off:true},9).wait(150));
 
 	// dress_code
 	this.shape_2 = new cjs.Shape();
@@ -1030,8 +1030,8 @@ if (reversed == null) { reversed = false; }
 	this.instance_1.setTransform(326.3,939.5,1,1,0,0,0,318,403.6);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_2}]},665).to({state:[{t:this.instance_1}]},144).to({state:[{t:this.instance_1}]},10).to({state:[]},11).wait(481));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(809).to({_off:false},0).to({x:-371.95},10).to({_off:true},11).wait(481));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_2}]},797).to({state:[{t:this.instance_1}]},144).to({state:[{t:this.instance_1}]},10).to({state:[]},11).wait(374));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(941).to({_off:false},0).to({x:-371.95},10).to({_off:true},11).wait(374));
 
 	// click3
 	this.click3 = new lib.click3();
@@ -1040,7 +1040,7 @@ if (reversed == null) { reversed = false; }
 	this.click3._off = true;
 	new cjs.ButtonHelper(this.click3, 0, 1, 2, false, new lib.click3(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.click3).wait(525).to({_off:false},0).to({_off:true},131).wait(655));
+	this.timeline.addTween(cjs.Tween.get(this.click3).wait(657).to({_off:false},0).to({_off:true},131).wait(548));
 
 	// map2
 	this.map2 = new lib.map1();
@@ -1049,7 +1049,7 @@ if (reversed == null) { reversed = false; }
 	this.map2._off = true;
 	new cjs.ButtonHelper(this.map2, 0, 1, 2, false, new lib.map1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.map2).wait(525).to({_off:false},0).wait(131).to({y:1070.55},0).to({y:-204.8},9).to({_off:true},11).wait(635));
+	this.timeline.addTween(cjs.Tween.get(this.map2).wait(657).to({_off:false},0).wait(131).to({y:1070.55},0).to({y:-204.8},9).to({_off:true},11).wait(528));
 
 	// reception
 	this.shape_3 = new cjs.Shape();
@@ -1063,8 +1063,8 @@ if (reversed == null) { reversed = false; }
 	this.instance_3 = new lib.Symbol17("synched",0);
 	this.instance_3.setTransform(540.25,-761.4,1,1,0,0,0,323.9,343.6);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_3}]},525).to({state:[{t:this.instance_2}]},131).to({state:[{t:this.instance_3}]},9).to({state:[]},11).wait(635));
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(656).to({_off:false},0).to({_off:true,y:-761.4},9).wait(646));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_3}]},657).to({state:[{t:this.instance_2}]},131).to({state:[{t:this.instance_3}]},9).to({state:[]},11).wait(528));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(788).to({_off:false},0).to({_off:true,y:-761.4},9).wait(539));
 
 	// click2
 	this.click2 = new lib.click2();
@@ -1073,7 +1073,7 @@ if (reversed == null) { reversed = false; }
 	this.click2._off = true;
 	new cjs.ButtonHelper(this.click2, 0, 1, 2, false, new lib.click2(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.click2).wait(494).to({_off:false},0).to({_off:true},131).wait(686));
+	this.timeline.addTween(cjs.Tween.get(this.click2).wait(516).to({_off:false},0).to({_off:true},131).wait(689));
 
 	// map1
 	this.map1 = new lib.map1();
@@ -1082,7 +1082,7 @@ if (reversed == null) { reversed = false; }
 	this.map1._off = true;
 	new cjs.ButtonHelper(this.map1, 0, 1, 2, false, new lib.map1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.map1).wait(494).to({_off:false},0).wait(131).to({y:947.1},0).to({y:-203.4},10).to({_off:true},10).wait(666));
+	this.timeline.addTween(cjs.Tween.get(this.map1).wait(516).to({_off:false},0).wait(131).to({y:947.1},0).to({y:-203.4},10).to({_off:true},10).wait(669));
 
 	// ceremonie
 	this.shape_4 = new cjs.Shape();
@@ -1096,8 +1096,8 @@ if (reversed == null) { reversed = false; }
 	this.instance_5 = new lib.Symbol11("synched",0);
 	this.instance_5.setTransform(531.4,-680.05,1,1,0,0,0,345.4,290.4);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_4}]},494).to({state:[{t:this.instance_4}]},131).to({state:[{t:this.instance_5}]},10).to({state:[]},10).wait(666));
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(625).to({_off:false},0).to({_off:true,y:-680.05},10).wait(676));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_4}]},516).to({state:[{t:this.instance_4}]},131).to({state:[{t:this.instance_5}]},10).to({state:[]},10).wait(669));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(647).to({_off:false},0).to({_off:true,y:-680.05},10).wait(679));
 
 	// horaire_bg
 	this.instance_6 = new lib.Tween19("synched",0);
@@ -1111,9 +1111,9 @@ if (reversed == null) { reversed = false; }
 	this.instance_8 = new lib.Tween21("synched",0);
 	this.instance_8.setTransform(540,960);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_6}]},458).to({state:[{t:this.instance_7}]},18).to({state:[{t:this.instance_8}]},18).to({state:[]},786).wait(31));
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(458).to({_off:false},0).to({_off:true,y:1719},18).wait(835));
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(458).to({_off:false},18).to({_off:true,y:960},18).wait(817));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_6}]},480).to({state:[{t:this.instance_7}]},18).to({state:[{t:this.instance_8}]},18).to({state:[]},819).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(480).to({_off:false},0).to({_off:true,y:1719},18).wait(838));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(480).to({_off:false},18).to({_off:true,y:960},18).wait(820));
 
 	// inviter
 	this.instance_9 = new lib.Tween16("synched",0);
@@ -1127,16 +1127,16 @@ if (reversed == null) { reversed = false; }
 	this.instance_11.setTransform(535.9,-115.3);
 	this.instance_11._off = true;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_9}]},420).to({state:[{t:this.instance_10}]},38).to({state:[{t:this.instance_11}]},18).to({state:[{t:this.instance_11}]},18).to({state:[]},16).wait(801));
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(458).to({_off:false},0).to({_off:true,x:535.9,y:-115.3},18).wait(835));
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(458).to({_off:false},18).to({x:540,y:-773.4},18).to({_off:true},16).wait(801));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_9}]},420).to({state:[{t:this.instance_10}]},60).to({state:[{t:this.instance_11}]},18).to({state:[{t:this.instance_11}]},18).to({state:[]},16).wait(804));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(480).to({_off:false},0).to({_off:true,x:535.9,y:-115.3},18).wait(838));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(480).to({_off:false},18).to({x:540,y:-773.4},18).to({_off:true},16).wait(804));
 
 	// MD
 	this.instance_12 = new lib.Symbol1("synched",0);
 	this.instance_12.setTransform(534.1,2809,1,1,0,0,0,466.8,406.6);
 	this.instance_12._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(324).to({_off:false},0).to({x:540,y:2027},15).to({y:968},28).wait(34).to({regY:406.5,scaleX:0.8285,scaleY:0.8285,x:538.75,y:971.9},0).to({x:530.45,y:726.4},19).wait(38).to({x:540,y:194.85},0).to({y:-424.7},18).to({y:-1110.35},18).to({_off:true},16).wait(801));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(324).to({_off:false},0).to({x:540,y:2027},15).to({y:968},28).wait(34).to({regY:406.5,scaleX:0.8285,scaleY:0.8285,x:538.75,y:971.9},0).to({x:530.45,y:726.4},19).wait(60).to({x:540,y:194.85},0).to({y:-424.7},18).to({y:-1110.35},18).to({_off:true},16).wait(804));
 
 	// bg2
 	this.instance_13 = new lib.Tween13("synched",0);
@@ -1151,9 +1151,9 @@ if (reversed == null) { reversed = false; }
 	this.instance_15.setTransform(540,968);
 	this.instance_15._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(324).to({_off:false},0).to({_off:true,y:2027},15).wait(972));
-	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(324).to({_off:false},15).to({_off:true,y:968},28).wait(944));
-	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(339).to({_off:false},28).wait(53).to({y:960},0).wait(38).to({y:465.65},0).to({y:-200.85},18).to({y:-956.15},18).to({_off:true},16).wait(801));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(324).to({_off:false},0).to({_off:true,y:2027},15).wait(997));
+	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(324).to({_off:false},15).to({_off:true,y:968},28).wait(969));
+	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(339).to({_off:false},28).wait(53).to({y:960},0).wait(60).to({y:465.65},0).to({y:-200.85},18).to({y:-956.15},18).to({_off:true},16).wait(804));
 
 	// click
 	this.click = new lib.click();
@@ -1162,21 +1162,21 @@ if (reversed == null) { reversed = false; }
 	this.click._off = true;
 	new cjs.ButtonHelper(this.click, 0, 1, 2, false, new lib.click(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.click).wait(241).to({_off:false},0).to({_off:true},3).wait(1067));
+	this.timeline.addTween(cjs.Tween.get(this.click).wait(241).to({_off:false},0).to({_off:true},3).wait(1092));
 
 	// overlay
 	this.overlay = new lib.overlay();
 	this.overlay.name = "overlay";
 	this.overlay.setTransform(527.1,931.75,1,1,0,0,0,3416.2,3155.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.overlay).to({alpha:0},3).to({_off:true},3).wait(1305));
+	this.timeline.addTween(cjs.Tween.get(this.overlay).to({alpha:0},3).to({_off:true},3).wait(1330));
 
 	// Photos
 	this.instance_16 = new lib.Symbol9("synched",0);
 	this.instance_16.setTransform(1832,928,1,1,0,0,0,1832,992);
 	this.instance_16._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(2).to({_off:false},0).to({x:1508.6},57).to({x:923.4},20).to({x:546.1},61).to({x:7.1},20).to({x:-431.8},61).to({regY:991.9,scaleX:1.2265,scaleY:1.2265,x:-1142.3,y:834.8},20).to({regX:1831.9,regY:992,scaleX:1.2414,scaleY:1.2414,x:-1160.25,y:-34.4},33).to({regX:1832,regY:991.9,scaleX:1.2235,scaleY:1.2235,x:-1134.6,y:-1228.05},8).to({_off:true},10).wait(1019));
+	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(2).to({_off:false},0).to({x:1508.6},57).to({x:923.4},20).to({x:546.1},61).to({x:7.1},20).to({x:-431.8},61).to({regY:991.9,scaleX:1.2265,scaleY:1.2265,x:-1142.3,y:834.8},20).to({regX:1831.9,regY:992,scaleX:1.2414,scaleY:1.2414,x:-1160.25,y:-34.4},33).to({regX:1832,regY:991.9,scaleX:1.2235,scaleY:1.2235,x:-1134.6,y:-1228.05},8).to({_off:true},10).wait(1044));
 
 	// evangile
 	this.shape_5 = new cjs.Shape();
@@ -1194,9 +1194,9 @@ if (reversed == null) { reversed = false; }
 	this.instance_19 = new lib.Tween6("synched",0);
 	this.instance_19.setTransform(540,-952);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_5}]},282).to({state:[{t:this.instance_17}]},42).to({state:[{t:this.instance_18}]},15).to({state:[{t:this.instance_19}]},28).to({state:[]},10).wait(934));
-	this.timeline.addTween(cjs.Tween.get(this.instance_17).wait(324).to({_off:false},0).to({_off:true,y:156.05},15).wait(972));
-	this.timeline.addTween(cjs.Tween.get(this.instance_18).wait(324).to({_off:false},15).to({_off:true,y:-952},28).wait(944));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_5}]},282).to({state:[{t:this.instance_17}]},42).to({state:[{t:this.instance_18}]},15).to({state:[{t:this.instance_19}]},28).to({state:[]},10).wait(959));
+	this.timeline.addTween(cjs.Tween.get(this.instance_17).wait(324).to({_off:false},0).to({_off:true,y:156.05},15).wait(997));
+	this.timeline.addTween(cjs.Tween.get(this.instance_18).wait(324).to({_off:false},15).to({_off:true,y:-952},28).wait(969));
 
 	// bg1
 	this.instance_20 = new lib.Untitled1();
@@ -1212,9 +1212,9 @@ if (reversed == null) { reversed = false; }
 	this.instance_23 = new lib.Tween8("synched",0);
 	this.instance_23.setTransform(540,-952);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_20}]},282).to({state:[{t:this.instance_21}]},42).to({state:[{t:this.instance_22}]},15).to({state:[{t:this.instance_23}]},28).to({state:[]},10).wait(934));
-	this.timeline.addTween(cjs.Tween.get(this.instance_21).wait(324).to({_off:false},0).to({_off:true,y:107},15).wait(972));
-	this.timeline.addTween(cjs.Tween.get(this.instance_22).wait(324).to({_off:false},15).to({_off:true,y:-952},28).wait(944));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_20}]},282).to({state:[{t:this.instance_21}]},42).to({state:[{t:this.instance_22}]},15).to({state:[{t:this.instance_23}]},28).to({state:[]},10).wait(959));
+	this.timeline.addTween(cjs.Tween.get(this.instance_21).wait(324).to({_off:false},0).to({_off:true,y:107},15).wait(997));
+	this.timeline.addTween(cjs.Tween.get(this.instance_22).wait(324).to({_off:false},15).to({_off:true,y:-952},28).wait(969));
 
 	this._renderFirstFrame();
 
@@ -1229,13 +1229,13 @@ lib.properties = {
 	color: "#F3F3F3",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_P_1.png?1773246351512", id:"index_atlas_P_1"},
-		{src:"images/index_atlas_P_2.png?1773246351512", id:"index_atlas_P_2"},
-		{src:"images/index_atlas_NP_1.jpg?1773246351512", id:"index_atlas_NP_1"},
-		{src:"images/index_atlas_NP_2.jpg?1773246351512", id:"index_atlas_NP_2"},
-		{src:"images/index_atlas_NP_3.jpg?1773246351512", id:"index_atlas_NP_3"},
-		{src:"images/index_atlas_NP_4.jpg?1773246351513", id:"index_atlas_NP_4"},
-		{src:"sounds/weddingmusicwav.mp3?1773246351596", id:"weddingmusicwav"}
+		{src:"images/index_atlas_P_1.png?1773248399098", id:"index_atlas_P_1"},
+		{src:"images/index_atlas_P_2.png?1773248399098", id:"index_atlas_P_2"},
+		{src:"images/index_atlas_NP_1.jpg?1773248399098", id:"index_atlas_NP_1"},
+		{src:"images/index_atlas_NP_2.jpg?1773248399098", id:"index_atlas_NP_2"},
+		{src:"images/index_atlas_NP_3.jpg?1773248399098", id:"index_atlas_NP_3"},
+		{src:"images/index_atlas_NP_4.jpg?1773248399098", id:"index_atlas_NP_4"},
+		{src:"sounds/weddingmusicwav.mp3?1773248399181", id:"weddingmusicwav"}
 	],
 	preloads: []
 };
